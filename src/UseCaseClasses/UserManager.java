@@ -13,6 +13,7 @@ public class UserManager {
     public UserManager(List<User> users){
         this.users = users;
         this.numUsers = users.size();
+
     }
 
     public int getNumUsers() {
