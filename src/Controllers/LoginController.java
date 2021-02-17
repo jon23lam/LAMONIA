@@ -3,6 +3,7 @@
  */
 package Controllers;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -39,8 +40,10 @@ public class LoginController {
         String username = usernameField.getText();
         String gameID = gameIdField.getText();
 
-        Parent root = FXMLLoader.load(getClass().getResource("Scenes/LoginMenu.fxml"));
-        sceneNavigator.setScene(new Scene(root, 600, 400), "Lobby");
+        URL url = new File("src/Scenes/LoginMenu.fxml").toURI().toURL();
+        FXMLLoader loader = new FXMLLoader(url);
+        Scene scene = new Scene(loader.load());
+        sceneNavigator.setScene(scene, "Lobby");
 
     }
 
