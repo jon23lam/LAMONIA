@@ -1,3 +1,4 @@
+import Controllers.SceneNavigator;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,10 +9,8 @@ public class Main extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Scenes/LoginMenu.fxml"));
-        primaryStage.setTitle("Login Menu");
-        primaryStage.setScene(new Scene(root, 600, 400));
-        primaryStage.show();
+        Game game = new Game(primaryStage);
+        game.run();
     }
 
 

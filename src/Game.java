@@ -1,4 +1,6 @@
 
+import Controllers.SceneNavigator;
+import Gateways.SceneViewInitializer;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -11,14 +13,24 @@ import java.net.URL;
 
 public class Game {
 
+    private SceneViewInitializer sceneViewInitializer;
 
-//    Stage stage = new Stage();
-//
-//    URL url = new File("LoginMenu").toURI().toURL();
-//    FXMLLoader loader = new FXMLLoader(url);
-//    Scene scene = new Scene(loader.load());
-//    scene.show()
-//
-//    public Game() throws IOException {
-//    }
+
+    public Game(Stage applicationStage) throws IOException {
+        sceneViewInitializer = getSceneInitializer(applicationStage);
+    }
+
+    public void run() {
+        SceneNavigator sceneNavigator = sceneViewInitializer.getSceneNavigator();
+        sceneNavigator.showGUI();
+    }
+
+    private SceneViewInitializer getSceneInitializer(Stage primaryStage) throws IOException {
+        sceneViewInitializer = new SceneViewInitializer(primaryStage);
+        return sceneViewInitializer;
+
+    }
+
+
+
 }

@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
    <children>
       <Label layoutX="180.0" layoutY="83.0" text="Welcome to LAMONIA" textAlignment="CENTER" underline="true">
          <font>
@@ -16,8 +15,8 @@
       </Label>
       <Label layoutX="180.0" layoutY="172.0" text="Username:" />
       <Label layoutX="180.0" layoutY="229.0" text="Game ID:" />
-      <TextField layoutX="250.0" layoutY="168.0" />
-      <TextField layoutX="250.0" layoutY="225.0" />
-      <Button layoutX="282.0" layoutY="306.0" mnemonicParsing="false" text="Join" />
+      <TextField fx:id="usernameField" layoutX="250.0" layoutY="168.0" />
+      <TextField fx:id="gameIdField" layoutX="250.0" layoutY="225.0" />
+      <Button fx:id="joinButton" layoutX="282.0" layoutY="306.0" mnemonicParsing="false" onAction="#joinButtonClicked" text="Join" />
    </children>
 </AnchorPane>
