@@ -33,4 +33,12 @@ public class UserManager {
             throw new CapacityException();
         }
     }
+
+    public User getUser(int index){
+        return users.get(index);
+    }
+
+    public int getGameSize(){
+        return users.size();
+    }
 }

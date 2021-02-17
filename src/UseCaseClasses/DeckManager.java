@@ -28,4 +28,8 @@ public class DeckManager {
         return deck.remove(deck.size() - 1);
     }
 
+    public boolean isEmpty(){
+        return deck.isEmpty();
+    }
+
 }

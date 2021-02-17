@@ -30,7 +30,7 @@ public class User {
     }
 
     public List<TopicCard> getCards(){
-        return getCards();
+        return cards;
     }
 
     public void updatePoints(){
@@ -40,9 +40,18 @@ public class User {
     public void addCard(TopicCard c){
         cards.add(c);
     }
+
     public void removeCard(){
         int size = cards.size();
         cards.remove(size - 1);
+    }
+
+    public TopicCard getCardOnTop(){
+        return cards.get(cards.size() - 1);
+    }
+
+    public void addPoint(){
+        points += 1;
     }
 
 }
