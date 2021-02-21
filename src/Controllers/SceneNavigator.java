@@ -21,6 +21,7 @@ public class SceneNavigator {
         Scene scene = new Scene(loader.load());
         this.applicationStage.setTitle("Login Menu");
         this.applicationStage.setScene(scene);
+
     }
 
     public void setScene(Scene scene, String title){

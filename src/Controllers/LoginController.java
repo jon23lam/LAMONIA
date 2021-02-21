@@ -35,15 +35,18 @@ public class LoginController {
     @FXML // fx:id="joinButton"
     private Button joinButton; // Value injected by FXMLLoader
 
+    public void setSceneNavigator(SceneNavigator s){
+        this.sceneNavigator = s;
+    }
     @FXML
     void joinButtonClicked(ActionEvent event) throws IOException {
         String username = usernameField.getText();
         String gameID = gameIdField.getText();
 
-        URL url = new File("src/Scenes/LoginMenu.fxml").toURI().toURL();
+        URL url = new File("src/Scenes/Lobby.fxml").toURI().toURL();
         FXMLLoader loader = new FXMLLoader(url);
         Scene scene = new Scene(loader.load());
-        sceneNavigator.setScene(scene, "Lobby");
+        sceneNavigator.setScene(scene, "Lobby"); //TODO: This doesn't work because it is not the same sceneNavigator
 
     }
 
